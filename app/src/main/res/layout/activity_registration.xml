@@ -43,7 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:layout_marginTop="30dp"
-        android:text="Login"
+        android:text="Register"
         android:textSize="15dp"
         android:background="#2d3e50"
         android:textAllCaps="false" />

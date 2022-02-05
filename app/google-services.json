@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "947399327820",
+    "project_id": "personalbudgettrack-pbt",
+    "storage_bucket": "personalbudgettrack-pbt.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:947399327820:android:fcb4d4f4b124fc927474e9",
+        "android_client_info": {
+          "package_name": "com.example.pbt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "947399327820-nu00a154og5t1mbjjhlr84t0e88b6cmm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.pbt",
+            "certificate_hash": "a6dd317d6f1de60cc43f8fbf306cb94fdd0e6a77"
+          }
+        },
+        {
+          "client_id": "947399327820-odp3borlhbf6ht02k212k0qcdt4elvpg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAi4Uhw-YnNpa2uhW4L3Aqiy7ZWLRqBG_k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "947399327820-odp3borlhbf6ht02k212k0qcdt4elvpg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

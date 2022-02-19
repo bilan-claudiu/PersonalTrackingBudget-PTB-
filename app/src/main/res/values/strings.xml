@@ -1,4 +1,16 @@
 <resources>
     <string name="app_name">PBT</string>
     <string name="budget">Budget</string>
+    <string-array name="items">
+        <item>Select items</item>
+        <item>Transport</item>
+        <item>House</item>
+        <item>Entertainment</item>
+        <item>Charity</item>
+        <item>Clothes</item>
+        <item>Health</item>
+        <item>Education</item>
+        <item>Food</item>
+        <item>Other</item>
+    </string-array>
 </resources>

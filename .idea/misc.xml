@@ -3,10 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/myFolders/Licenta/PBT/app/src/main/res/layout/activity_budget.xml" value="0.25052083333333336" />
         <entry key="..\:/myFolders/Licenta/PBT/app/src/main/res/layout/activity_login.xml" value="0.24010416666666667" />
         <entry key="..\:/myFolders/Licenta/PBT/app/src/main/res/layout/activity_main.xml" value="0.25052083333333336" />
         <entry key="..\:/myFolders/Licenta/PBT/app/src/main/res/layout/activity_registration.xml" value="0.264" />
         <entry key="..\:/myFolders/Licenta/PBT/app/src/main/res/layout/activity_splash_screen.xml" value="0.25" />
+        <entry key="..\:/myFolders/Licenta/PBT/app/src/main/res/layout/input_layout.xml" value="0.25052083333333336" />
+        <entry key="..\:/myFolders/Licenta/PBT/app/src/main/res/layout/retrive_layout.xml" value="0.23854166666666668" />
       </map>
     </option>
   </component>

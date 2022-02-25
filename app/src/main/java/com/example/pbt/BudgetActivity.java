@@ -1,11 +1,5 @@
 package com.example.pbt;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.os.Bundle;
@@ -17,10 +11,16 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
-import android.widget.SpinnerAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -30,10 +30,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.MutableData;
-import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.database.ValueEventListener;
-
 
 import org.joda.time.DateTime;
 import org.joda.time.Months;
@@ -48,10 +45,10 @@ public class BudgetActivity extends AppCompatActivity {
     private TextView totalBudgetAmountTextView;
     private RecyclerView recyclerView;
 
-
+    //declarare floating action button
     private FloatingActionButton fab;
 
-    //variable needed to create budget anf conect to firebase database
+    //variable needed to create budget anf connect to firebase database
     private DatabaseReference budgetRef;
     private FirebaseAuth mAuth;
     private ProgressDialog loader;
@@ -67,10 +64,12 @@ public class BudgetActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_budget);
 
+        //autorizare Firebase
         mAuth = FirebaseAuth.getInstance();
         budgetRef = FirebaseDatabase.getInstance().getReference().child("budget").child(mAuth.getCurrentUser().getUid());
         loader = new ProgressDialog(this);
 
+        //initializari variabile
         totalBudgetAmountTextView = findViewById(R.id.totalBudgetAmountTextView);
         recyclerView = findViewById(R.id.recyclerView);
 
@@ -99,7 +98,7 @@ public class BudgetActivity extends AppCompatActivity {
             }
         });
 
-
+        //initializare floating action button
         fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -143,27 +142,26 @@ public class BudgetActivity extends AppCompatActivity {
                     loader.show();
 
                     String id = budgetRef.push().getKey();
-                    DateFormat dateFormat = new SimpleDateFormat("dd-mm-yyyy");
+                    DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
                     Calendar cal = Calendar.getInstance();
                     String date = dateFormat.format(cal.getTime());
 
                     MutableDateTime epoch = new MutableDateTime();
+                    epoch.setDate(0);
                     DateTime now = new DateTime();
                     Months months = Months.monthsBetween(epoch, now);
 
                     Data data = new Data(budgetItem, date, id, null, Integer.parseInt(budgetAmount), months.getMonths());
 
-                    budgetRef.child(id).setValue(data).addOnCompleteListener(new OnCompleteListener<Void>() {
-                        @Override
-                        public void onComplete(@NonNull Task<Void> task) {
-                            if (task.isSuccessful()) {
-                                Toast.makeText(BudgetActivity.this, "Budget item added successfuly", Toast.LENGTH_SHORT).show();
-                            } else {
-                                Toast.makeText(BudgetActivity.this, task.getException().toString(), Toast.LENGTH_SHORT).show();
+                    budgetRef.child(id).setValue(data).addOnCompleteListener((task) -> {
+                        if (task.isSuccessful()) {
+                            Toast.makeText(BudgetActivity.this, "Budget item added successfuly", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(BudgetActivity.this, task.getException().toString(), Toast.LENGTH_SHORT).show();
 
-                            }
-                            loader.dismiss();
                         }
+                        loader.dismiss();
+
 
                     });
 
@@ -237,6 +235,7 @@ public class BudgetActivity extends AppCompatActivity {
                     public void onClick(View view) {
                         post_key = getRef(position).getKey();
                         item = model.getItem();
+                        amount=model.getAmount();
                         updateData();
 
                     }
@@ -263,7 +262,7 @@ public class BudgetActivity extends AppCompatActivity {
     public class MyViewHolder extends RecyclerView.ViewHolder {
         View mView;
         public ImageView imageView;
-        public TextView notes;
+        public TextView notes, date;
 
 
         public MyViewHolder(@NonNull View itemView) {
@@ -272,6 +271,7 @@ public class BudgetActivity extends AppCompatActivity {
             mView = itemView;
             imageView = itemView.findViewById(R.id.imageView);
             notes = itemView.findViewById(R.id.notes);
+            date = itemView.findViewById(R.id.dateItem);
 
         }
 
@@ -286,9 +286,9 @@ public class BudgetActivity extends AppCompatActivity {
         }
 
         public void setDate(String itemDate) {
-            TextView date = mView.findViewById(R.id.date);
+            TextView date = mView.findViewById(R.id.dateItem);
+            date.setText(itemDate);
         }
-
 
     }
 
@@ -299,6 +299,8 @@ public class BudgetActivity extends AppCompatActivity {
 
         myDialog.setView(mView);
         final AlertDialog dialog = myDialog.create();
+
+
         final TextView mItem = mView.findViewById(R.id.itemNameUpdate);
         final EditText mAmount = mView.findViewById(R.id.updateAmount);
         final EditText mNotes = mView.findViewById(R.id.updateNote);
@@ -317,7 +319,7 @@ public class BudgetActivity extends AppCompatActivity {
 
                 amount = Integer.parseInt(mAmount.getText().toString());
 
-                DateFormat dateFormat = new SimpleDateFormat("dd-mm-yyyy");
+                DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
                 Calendar cal = Calendar.getInstance();
                 String date = dateFormat.format(cal.getTime());
 

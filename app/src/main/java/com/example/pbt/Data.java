@@ -3,18 +3,19 @@ package com.example.pbt;
 public class Data {
 
     String item, date, id, notes;
-    int amount, mounth;
+    int amount, mounth, week;
 
     public Data() {
     }
 
-    public Data(String item, String date, String id, String notes, int amount, int mounth) {
+    public Data(String item, String date, String id, String notes, int amount, int mounth, int week) {
         this.item = item;
         this.date = date;
         this.id = id;
         this.notes = notes;
         this.amount = amount;
         this.mounth = mounth;
+        this.week = week;
     }
 
     public String getItem() {
@@ -63,5 +64,13 @@ public class Data {
 
     public void setMounth(int mounth) {
         this.mounth = mounth;
+    }
+
+    public int getWeek() {
+        return week;
+    }
+
+    public void setWeek(int week) {
+        this.week = week;
     }
 }

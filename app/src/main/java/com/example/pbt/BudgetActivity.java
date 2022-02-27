@@ -35,6 +35,7 @@ import com.google.firebase.database.ValueEventListener;
 import org.joda.time.DateTime;
 import org.joda.time.Months;
 import org.joda.time.MutableDateTime;
+import org.joda.time.Weeks;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -150,8 +151,9 @@ public class BudgetActivity extends AppCompatActivity {
                     epoch.setDate(0);
                     DateTime now = new DateTime();
                     Months months = Months.monthsBetween(epoch, now);
+                    Weeks weeks = Weeks.weeksBetween(epoch, now);
 
-                    Data data = new Data(budgetItem, date, id, null, Integer.parseInt(budgetAmount), months.getMonths());
+                    Data data = new Data(budgetItem, date, id, null, Integer.parseInt(budgetAmount), months.getMonths(), weeks.getWeeks());
 
                     budgetRef.child(id).setValue(data).addOnCompleteListener((task) -> {
                         if (task.isSuccessful()) {
@@ -235,7 +237,7 @@ public class BudgetActivity extends AppCompatActivity {
                     public void onClick(View view) {
                         post_key = getRef(position).getKey();
                         item = model.getItem();
-                        amount=model.getAmount();
+                        amount = model.getAmount();
                         updateData();
 
                     }
@@ -327,8 +329,9 @@ public class BudgetActivity extends AppCompatActivity {
                 epoch.setDate(0);
                 DateTime now = new DateTime();
                 Months months = Months.monthsBetween(epoch, now);
+                Weeks weeks = Weeks.weeksBetween(epoch, now);
 
-                Data data = new Data(item, date, post_key, null, amount, months.getMonths());
+                Data data = new Data(item, date, post_key, null, amount, months.getMonths(), weeks.getWeeks());
 
                 budgetRef.child(post_key).setValue(data).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override

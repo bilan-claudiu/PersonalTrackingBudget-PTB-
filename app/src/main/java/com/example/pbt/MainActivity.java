@@ -1,15 +1,18 @@
 package com.example.pbt;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 public class MainActivity extends AppCompatActivity {
-    //private CardView budgetCardView,todayCardView;
-    private ImageView weekBtnImageView, todayBtnImageView, budgetBtnImageView;
+    private CardView budgetCardView,todayCardView;
+    private ImageView weekBtnImageView,todayBtnImageView,budgetBtnImageView,monthBtnImageView ;
+
+
 
 
     @Override
@@ -17,22 +20,25 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        budgetCardView = findViewById(R.id.budgetCardView);
-//        todayCardView=findViewById(R.id.todayCardView);
+        budgetCardView = findViewById(R.id.budgetCardView);
+        todayCardView=findViewById(R.id.todayCardView);
 
-        weekBtnImageView = findViewById(R.id.weekBtnImageView);
-        todayBtnImageView = findViewById(R.id.todayBtnImageView);
-        budgetBtnImageView = findViewById(R.id.budgetBtnImageView);
+        weekBtnImageView=findViewById(R.id.weekBtnImageView);
+        todayBtnImageView=findViewById(R.id.todayBtnImageView);
+        budgetBtnImageView=findViewById(R.id.budgetBtnImageView);
+        monthBtnImageView=findViewById(R.id.monthBtnImageView);
 
 
-        budgetBtnImageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, BudgetActivity.class);
-                startActivity(intent);
 
-            }
-        });
+
+//        budgetBtnImageView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(MainActivity.this, BudgetActivity.class);
+//                startActivity(intent);
+//
+//            }
+//        });
 
         todayBtnImageView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,8 +52,18 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, WeekSpendingActivity.class);
+                intent.putExtra("type","week");
                 startActivity(intent);
 
+            }
+        });
+
+        monthBtnImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, WeekSpendingActivity.class);
+                intent.putExtra("type","mounth");
+                startActivity(intent);
             }
         });
 

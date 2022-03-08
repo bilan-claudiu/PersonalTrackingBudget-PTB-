@@ -88,7 +88,7 @@ public class BudgetActivity extends AppCompatActivity {
                 for (DataSnapshot snap : snapshot.getChildren()) {
                     Data data = snap.getValue(Data.class);
                     totalAmount += data.getAmount();
-                    String sTotal = String.valueOf("Month budget: $" + totalAmount);
+                    String sTotal = String.valueOf("Buget Lunar: RON" + totalAmount);
                     totalBudgetAmountTextView.setText(sTotal);
                 }
             }
@@ -132,13 +132,13 @@ public class BudgetActivity extends AppCompatActivity {
                 String budgetItem = itemSpinner.getSelectedItem().toString();
 
                 if (TextUtils.isEmpty(budgetAmount)) {
-                    amount.setError("Amount is required!");
+                    amount.setError("Bugetul trebuie setat!");
                     return;
                 }
                 if (budgetItem.equals("Select item")) {
-                    Toast.makeText(BudgetActivity.this, "Select a valid item", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(BudgetActivity.this, "Selecteaza o optiune valida", Toast.LENGTH_SHORT).show();
                 } else {
-                    loader.setMessage("adding a budget item");
+                    loader.setMessage("adaugare categorie de buget");
                     loader.setCancelable(false);
                     loader.show();
 
@@ -157,7 +157,7 @@ public class BudgetActivity extends AppCompatActivity {
 
                     budgetRef.child(id).setValue(data).addOnCompleteListener((task) -> {
                         if (task.isSuccessful()) {
-                            Toast.makeText(BudgetActivity.this, "Budget item added successfuly", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(BudgetActivity.this, "Categorie de buget adaugata cu succes", Toast.LENGTH_SHORT).show();
                         } else {
                             Toast.makeText(BudgetActivity.this, task.getException().toString(), Toast.LENGTH_SHORT).show();
 
@@ -194,9 +194,9 @@ public class BudgetActivity extends AppCompatActivity {
         FirebaseRecyclerAdapter<Data, MyViewHolder> adapter = new FirebaseRecyclerAdapter<Data, MyViewHolder>(options) {
             @Override
             protected void onBindViewHolder(@NonNull MyViewHolder holder, @SuppressLint("RecyclerView") int position, @NonNull Data model) {
-                holder.setItemAmount("Allocated amount: $" + model.getAmount());
-                holder.setDate("On: " + model.getDate());
-                holder.setItemName("Budget item: " + model.getItem());
+                holder.setItemAmount("Buget Alocat: RON" + model.getAmount());
+                holder.setDate("la data: " + model.getDate());
+                holder.setItemName("Categorie: " + model.getItem());
 
                 holder.notes.setVisibility(View.GONE);
 
@@ -337,7 +337,7 @@ public class BudgetActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
-                            Toast.makeText(BudgetActivity.this, "Budget item updaded successfuly", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(BudgetActivity.this, "Bugetul a fost modificat cu succes", Toast.LENGTH_SHORT).show();
                         } else {
                             Toast.makeText(BudgetActivity.this, task.getException().toString(), Toast.LENGTH_SHORT).show();
 
@@ -357,7 +357,7 @@ public class BudgetActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
-                            Toast.makeText(BudgetActivity.this, "Deleted successfuly", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(BudgetActivity.this, "Sters cu succes", Toast.LENGTH_SHORT).show();
                         } else {
                             Toast.makeText(BudgetActivity.this, task.getException().toString(), Toast.LENGTH_SHORT).show();
 

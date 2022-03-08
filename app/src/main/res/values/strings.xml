@@ -2,15 +2,15 @@
     <string name="app_name">PBT</string>
     <string name="budget">Budget</string>
     <string-array name="items">
-        <item>Select items</item>
+        <item>Selecteaza categoria</item>
         <item>Transport</item>
-        <item>House</item>
+        <item>Facturi/Casa</item>
         <item>Entertainment</item>
-        <item>Charity</item>
-        <item>Clothes</item>
-        <item>Health</item>
-        <item>Education</item>
-        <item>Food</item>
-        <item>Other</item>
+        <item>Caritate</item>
+        <item>Imbracaminte/Incaltaminte</item>
+        <item>Sanatate</item>
+        <item>Educatie</item>
+        <item>Alimente</item>
+        <item>Altele</item>
     </string-array>
 </resources>

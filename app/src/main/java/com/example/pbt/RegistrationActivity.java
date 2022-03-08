@@ -57,12 +57,12 @@ public class RegistrationActivity extends AppCompatActivity {
                 String passwordString = pasword.getText().toString();
 
                 if (TextUtils.isEmpty(emailString)) {
-                    email.setError("Email is required");
+                    email.setError("Introduceti o adresa de email");
                 }
                 if (TextUtils.isEmpty(passwordString)) {
-                    pasword.setError("Password is required");
+                    pasword.setError("Parola este obligatorie");
                 } else {
-                    progressDialog.setMessage("register in progres");
+                    progressDialog.setMessage("inregistrare in curs...");
                     progressDialog.setCanceledOnTouchOutside(false);
                     progressDialog.show();
 

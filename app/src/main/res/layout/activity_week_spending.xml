@@ -21,10 +21,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="Total Week Amount : 0$"
+        android:text="Cheltuieli pe saptamana : 0 RON"
         android:textAlignment="center"
         android:textColor="@color/gray_100"
-        android:textSize="25sp"
+        android:textSize="20sp"
         android:textStyle="bold" />
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout

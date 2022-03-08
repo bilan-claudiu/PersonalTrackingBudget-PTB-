@@ -33,37 +33,37 @@ public class WeekSpendingAdapter extends RecyclerView.Adapter<WeekSpendingAdapte
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         final Data data = myDataList.get(position);
 
-        holder.item.setText("Item " + data.getItem());
-        holder.amount.setText("Amount " + data.getAmount());
-        holder.date.setText("On " + data.getDate());
-        holder.notes.setText("Note: " + data.getNotes());
+        holder.item.setText("Categorie " + data.getItem());
+        holder.amount.setText("Suma " + data.getAmount());
+        holder.date.setText("La data " + data.getDate());
+        holder.notes.setText("Detalii: " + data.getNotes());
 
         switch (data.getItem()) {
             case "Transport":
                 holder.imageView.setImageResource(R.drawable.transport);
                 break;
-            case "House":
+            case "Facturi/Casa":
                 holder.imageView.setImageResource(R.drawable.house);
                 break;
             case "Entertainment":
                 holder.imageView.setImageResource(R.drawable.enter);
                 break;
-            case "Charity":
+            case "Caritate":
                 holder.imageView.setImageResource(R.drawable.ic_consultancy);
                 break;
-            case "Clothes":
+            case "Imbracaminte/Incaltaminte":
                 holder.imageView.setImageResource(R.drawable.ic_shirt);
                 break;
-            case "Health":
+            case "Sanatate":
                 holder.imageView.setImageResource(R.drawable.health);
                 break;
-            case "Education":
+            case "Educatie":
                 holder.imageView.setImageResource(R.drawable.education);
                 break;
-            case "Food":
+            case "Alimente":
                 holder.imageView.setImageResource(R.drawable.fastfood);
                 break;
-            case "Other":
+            case "Altele":
                 holder.imageView.setImageResource(R.drawable.applogo2);
                 break;
 

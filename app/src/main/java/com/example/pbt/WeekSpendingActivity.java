@@ -112,7 +112,7 @@ public class WeekSpendingActivity extends AppCompatActivity {
                     int pTotal = Integer.parseInt(String.valueOf(total));
                     totalAmount += pTotal;
 
-                    totalWeekAmountTextView.setText("Total Month's Spending: $" + totalAmount);
+                    totalWeekAmountTextView.setText("Total cheltuieli pe luna: " + totalAmount+" RON");
 
                 }
             }
@@ -153,7 +153,7 @@ public class WeekSpendingActivity extends AppCompatActivity {
                     int pTotal = Integer.parseInt(String.valueOf(total));
                     totalAmount += pTotal;
 
-                    totalWeekAmountTextView.setText("Total Week's Spending: $" + totalAmount);
+                    totalWeekAmountTextView.setText("Total cheltuieli pe saptamana: " + totalAmount+" RON");
 
                 }
             }

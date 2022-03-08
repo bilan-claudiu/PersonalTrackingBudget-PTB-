@@ -54,8 +54,8 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_marginTop="15dp"
-        android:text="Have an account?Login"
-        android:textSize="20dp"/>
+        android:text="Allready have an account? Login"
+        android:textSize="18dp"/>
 
 
 </LinearLayout>

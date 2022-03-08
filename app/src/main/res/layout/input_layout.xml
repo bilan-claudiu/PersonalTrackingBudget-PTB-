@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Select a budget item"
+            android:text="Selectare categorie buget"
             android:textColor="@color/gray_100"
             android:textSize="18sp" />
 
@@ -42,7 +42,7 @@
                 android:id="@+id/amount"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter amount..."
+                android:hint="introdu suma..."
                 android:inputType="number"
                 android:textColor="@color/gray_100"
                 android:textColorHint="@color/gray_100" />
@@ -51,7 +51,7 @@
                 android:id="@+id/note"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter note..."
+                android:hint="Introdu detalii..."
                 android:textColor="@color/gray_100"
                 android:textColorHint="@color/gray_100"
                 android:visibility="gone" />

@@ -12,4 +12,7 @@
     <color name="blue">#2e79bd</color>
     <color name="blue_light">#d9e9f6</color>
     <color name="blue_dark">#1e517f</color>
+    <color name="blue_background">#b1c8eb</color>
+    <color name="blue_background2">#97cde3</color>
+
 </resources>

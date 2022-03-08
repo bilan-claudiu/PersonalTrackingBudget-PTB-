@@ -10,7 +10,7 @@ import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
     private CardView budgetCardView,todayCardView;
-    private ImageView weekBtnImageView,todayBtnImageView,budgetBtnImageView,monthBtnImageView ;
+    private ImageView weekBtnImageView,todayBtnImageView,budgetBtnImageView,monthBtnImageView ,analitycsImageView;
 
 
 
@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         todayBtnImageView=findViewById(R.id.todayBtnImageView);
         budgetBtnImageView=findViewById(R.id.budgetBtnImageView);
         monthBtnImageView=findViewById(R.id.monthBtnImageView);
+        analitycsImageView=findViewById(R.id.analitycsImageView);
 
 
 
@@ -64,6 +65,15 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, WeekSpendingActivity.class);
                 intent.putExtra("type","mounth");
                 startActivity(intent);
+            }
+        });
+
+        analitycsImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ChooseAnalyticsActivity.class);
+                startActivity(intent);
+
             }
         });
 

@@ -24,7 +24,7 @@
                 android:id="@+id/item"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Item"
+                android:text="Categorie"
                 android:textColor="@color/gray_100"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -33,7 +33,7 @@
                 android:id="@+id/amount"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="0$"
+                android:text="0 RON"
                 android:textColor="@color/gray_100"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -42,7 +42,7 @@
                 android:id="@+id/notes"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Note"
+                android:text="Detalii"
                 android:textColor="@color/gray_100"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -51,7 +51,7 @@
                 android:id="@+id/dateItem"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Date"
+                android:text="Data"
                 android:textColor="@color/gray_100"
                 android:textSize="18sp"
                 android:textStyle="bold" />

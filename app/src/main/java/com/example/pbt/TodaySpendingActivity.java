@@ -65,7 +65,7 @@ public class TodaySpendingActivity extends AppCompatActivity {
 
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Today Spending");
+        getSupportActionBar().setTitle("Cheltuieli astazi");
 
 
         totalAmountSpentOn = findViewById(R.id.totalAmountSpentOn);
@@ -125,7 +125,7 @@ public class TodaySpendingActivity extends AppCompatActivity {
                     int pTotal = Integer.parseInt(String.valueOf(total));
                     totalAmount += pTotal;
 
-                    totalAmountSpentOn.setText("Total Day's Spending: $" + totalAmount);
+                    totalAmountSpentOn.setText("Total cheltuiti astazi: RON" + totalAmount);
                 }
 
 
@@ -165,17 +165,17 @@ public class TodaySpendingActivity extends AppCompatActivity {
                 String notes = note.getText().toString();
 
                 if (TextUtils.isEmpty(Amount)) {
-                    amount.setError("Amount is required!");
+                    amount.setError("Bugetul este necesar!");
                     return;
                 }
-                if (Item.equals("Select item")) {
-                    Toast.makeText(TodaySpendingActivity.this, "Select a valid item", Toast.LENGTH_SHORT).show();
+                if (Item.equals("Selecteaza categoria")) {
+                    Toast.makeText(TodaySpendingActivity.this, "Selecteaza o categorie valida", Toast.LENGTH_SHORT).show();
                 }
                 if (TextUtils.isEmpty(notes)) {
-                    note.setError("Note is required");
+                    note.setError("Detaliile sunt necesare");
                     return;
                 } else {
-                    loader.setMessage("adding a budget item");
+                    loader.setMessage("adaug categorie... ");
                     loader.setCancelable(false);
                     loader.show();
 
@@ -194,7 +194,7 @@ public class TodaySpendingActivity extends AppCompatActivity {
 
                     expensesRef.child(id).setValue(data).addOnCompleteListener((task) -> {
                         if (task.isSuccessful()) {
-                            Toast.makeText(TodaySpendingActivity.this, "Budget item added successfuly", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(TodaySpendingActivity.this, "Categorie adaugata cu succes", Toast.LENGTH_SHORT).show();
                         } else {
                             Toast.makeText(TodaySpendingActivity.this, task.getException().toString(), Toast.LENGTH_SHORT).show();
 

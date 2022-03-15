@@ -47,13 +47,11 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Analiza zilnica "
+                android:text="Analiza zilnica"
                 android:textAlignment="center"
                 android:textColor="#2d3e50"
                 android:textSize="20dp"
                 android:textStyle="bold" />
-
-
 
         </LinearLayout>
 
@@ -96,7 +94,6 @@
                 android:textStyle="bold" />
 
 
-
         </LinearLayout>
 
 
@@ -136,7 +133,6 @@
                 android:textColor="#2d3e50"
                 android:textSize="20dp"
                 android:textStyle="bold" />
-
 
 
         </LinearLayout>

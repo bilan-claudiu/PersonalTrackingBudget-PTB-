@@ -16,7 +16,7 @@
             android:id="@+id/my_Feed_Toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#000"
+            android:background="@color/gray_100"
             android:elevation="4dp"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
@@ -28,7 +28,7 @@
             android:layout_marginTop="5dp"
             android:text="Cheltuieli totale 00.00"
             android:textAlignment="center"
-            android:textColor="#000"
+            android:textColor="@color/gray_100"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -341,7 +341,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="00.00"
-                            android:textColor="#000"
+                            android:textColor="@color/gray_100"
                             android:textSize="15sp"
                             android:textStyle="bold" />
 
@@ -371,7 +371,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Luna curenta"
-                            android:textColor="#000"
+                            android:textColor="@color/gray_100"
                             android:textSize="12sp"
 
                             />
@@ -406,7 +406,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Educatie"
-                            android:textColor="#000"
+                            android:textColor="@color/gray_100"
                             android:textSize="18sp"
                             android:textStyle="bold" />
 
@@ -415,7 +415,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="00.00"
-                            android:textColor="#000"
+                            android:textColor="@color/gray_100"
                             android:textSize="15sp"
                             android:textStyle="bold" />
 
@@ -430,7 +430,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="2"
                                 android:text="status"
-                                android:textColor="#000"
+                                android:textColor="@color/gray_100"
                                 android:textSize="12sp" />
 
                             <ImageView
@@ -480,7 +480,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Caritate"
-                            android:textColor="#000"
+                            android:textColor="@color/gray_100"
                             android:textSize="18sp"
                             android:textStyle="bold" />
 
@@ -489,7 +489,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="00.00"
-                            android:textColor="#000"
+                            android:textColor="@color/gray_100"
                             android:textSize="15sp"
                             android:textStyle="bold" />
 
@@ -504,7 +504,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="2"
                                 android:text="status"
-                                android:textColor="#000"
+                                android:textColor="@color/gray_100"
                                 android:textSize="12sp" />
 
                             <ImageView
@@ -519,7 +519,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Luna curenta"
-                            android:textColor="#000"
+                            android:textColor="@color/gray_100"
                             android:textSize="12sp"
 
                             />
@@ -551,7 +551,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Haine/incaltaminte"
-                            android:textColor="#000"
+                            android:textColor="@color/gray_100"
                             android:textSize="18sp"
                             android:textStyle="bold" />
 
@@ -560,7 +560,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="00.00"
-                            android:textColor="#000"
+                            android:textColor="@color/gray_100"
                             android:textSize="15sp"
                             android:textStyle="bold" />
 
@@ -575,7 +575,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="2"
                                 android:text="status"
-                                android:textColor="#000"
+                                android:textColor="@color/gray_100"
                                 android:textSize="12sp" />
 
                             <ImageView
@@ -590,7 +590,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Luna curenta"
-                            android:textColor="#000"
+                            android:textColor="@color/gray_100"
                             android:textSize="12sp"
 
                             />
@@ -622,7 +622,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Sanatate"
-                            android:textColor="#000"
+                            android:textColor="@color/gray_100"
                             android:textSize="18sp"
                             android:textStyle="bold" />
 
@@ -631,7 +631,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="00.00"
-                            android:textColor="#000"
+                            android:textColor="@color/gray_100"
                             android:textSize="15sp"
                             android:textStyle="bold" />
 
@@ -646,7 +646,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="2"
                                 android:text="status"
-                                android:textColor="#000"
+                                android:textColor="@color/gray_100"
                                 android:textSize="12sp" />
 
                             <ImageView
@@ -661,7 +661,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Luna curenta"
-                            android:textColor="#000"
+                            android:textColor="@color/gray_100"
                             android:textSize="12sp"
 
                             />
@@ -696,7 +696,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Altele"
-                            android:textColor="#000"
+                            android:textColor="@color/gray_100"
                             android:textSize="18sp"
                             android:textStyle="bold" />
 
@@ -705,7 +705,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="00.00"
-                            android:textColor="#000"
+                            android:textColor="@color/gray_100"
                             android:textSize="15sp"
                             android:textStyle="bold" />
 
@@ -737,7 +737,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Luna curenta"
-                            android:textColor="#000"
+                            android:textColor="@color/gray_100"
                             android:textSize="12sp"
 
                             />
@@ -780,7 +780,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Total cheltuieli lunare"
-                            android:textColor="#000"
+                            android:textColor="@color/gray_100"
                             android:textSize="18sp"
                             android:textStyle="bold" />
 
@@ -789,7 +789,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Total cheltuili: RON 0"
-                            android:textColor="#000"
+                            android:textColor="@color/gray_100"
                             android:textSize="15sp"
                             android:textStyle="bold" />
 
@@ -804,7 +804,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="2"
                                 android:text="status"
-                                android:textColor="#000"
+                                android:textColor="@color/gray_100"
                                 android:textSize="12sp" />
 
                             <ImageView
@@ -820,7 +820,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Azi"
+                            android:text="Luna curenta"
                             android:textColor="#000"
                             android:textSize="12sp"
 

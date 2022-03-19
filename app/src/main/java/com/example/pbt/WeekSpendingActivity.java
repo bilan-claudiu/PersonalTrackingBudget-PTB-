@@ -51,7 +51,7 @@ public class WeekSpendingActivity extends AppCompatActivity {
 
         toolbar=findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Week Spending: ");
+        getSupportActionBar().setTitle("Cheltuieli saptamanele: ");
 
         totalWeekAmountTextView=findViewById(R.id.totalWeekAmountTextView);
         progressBar=findViewById(R.id.progressBar);

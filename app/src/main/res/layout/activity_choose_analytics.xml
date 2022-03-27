@@ -42,7 +42,7 @@
                 android:id="@+id/todayBtnImageView"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:src="@drawable/today2" />
+                android:src="@drawable/today" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -52,6 +52,8 @@
                 android:textColor="#2d3e50"
                 android:textSize="20dp"
                 android:textStyle="bold" />
+
+
 
         </LinearLayout>
 
@@ -94,6 +96,7 @@
                 android:textStyle="bold" />
 
 
+
         </LinearLayout>
 
 
@@ -133,6 +136,7 @@
                 android:textColor="#2d3e50"
                 android:textSize="20dp"
                 android:textStyle="bold" />
+
 
 
         </LinearLayout>

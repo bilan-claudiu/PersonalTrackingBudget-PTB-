@@ -26,9 +26,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:text="Cheltuieli totale 00.00"
+            android:text="Cheltuieli totale 0 RON"
             android:textAlignment="center"
-            android:textColor="@color/gray_100"
+            android:textColor="#000"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -97,7 +97,7 @@
                 android:orientation="vertical">
 
                 <RelativeLayout
-                    android:id="@+id/linearLayoutTransport"
+                    android:id="@+id/relativeLayoutTransport"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
@@ -151,11 +151,9 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Luna curenta"
+                            android:text="Luna asta: "
                             android:textColor="@color/gray_100"
-                            android:textSize="12sp"
-
-                            />
+                            android:textSize="12sp" />
                     </LinearLayout>
 
                     <ImageView
@@ -171,7 +169,7 @@
                 </RelativeLayout>
 
                 <RelativeLayout
-                    android:id="@+id/linearLayoutFood"
+                    android:id="@+id/relativeLayoutFood"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
@@ -225,7 +223,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Luna curenta"
+                            android:text="Luna asta: "
                             android:textColor="@color/gray_100"
                             android:textSize="12sp" />
 
@@ -245,7 +243,7 @@
                 </RelativeLayout>
 
                 <RelativeLayout
-                    android:id="@+id/linearLayoutFoodHouse"
+                    android:id="@+id/relativeLayoutHouse"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
@@ -299,7 +297,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Luna curenta"
+                            android:text="Luna asta: "
                             android:textColor="@color/gray_100"
                             android:textSize="12sp" />
                     </LinearLayout>
@@ -316,7 +314,7 @@
                 </RelativeLayout>
 
                 <RelativeLayout
-                    android:id="@+id/linearLayoutEntertainment"
+                    android:id="@+id/relativeLayoutEntertainment"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
@@ -341,7 +339,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="00.00"
-                            android:textColor="@color/gray_100"
+                            android:textColor="#000"
                             android:textSize="15sp"
                             android:textStyle="bold" />
 
@@ -370,8 +368,8 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Luna curenta"
-                            android:textColor="@color/gray_100"
+                            android:text="Luna asta: "
+                            android:textColor="#000"
                             android:textSize="12sp"
 
                             />
@@ -390,7 +388,7 @@
                 </RelativeLayout>
 
                 <RelativeLayout
-                    android:id="@+id/linearLayoutEducation"
+                    android:id="@+id/relativeLayoutEducation"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
@@ -406,7 +404,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Educatie"
-                            android:textColor="@color/gray_100"
+                            android:textColor="#000"
                             android:textSize="18sp"
                             android:textStyle="bold" />
 
@@ -415,7 +413,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="00.00"
-                            android:textColor="@color/gray_100"
+                            android:textColor="#000"
                             android:textSize="15sp"
                             android:textStyle="bold" />
 
@@ -430,7 +428,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="2"
                                 android:text="status"
-                                android:textColor="@color/gray_100"
+                                android:textColor="#000"
                                 android:textSize="12sp" />
 
                             <ImageView
@@ -444,7 +442,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Luna curenta"
+                            android:text="Luna asta: "
                             android:textColor="#000"
                             android:textSize="12sp"
 
@@ -464,7 +462,7 @@
                 </RelativeLayout>
 
                 <RelativeLayout
-                    android:id="@+id/linearLayoutCharity"
+                    android:id="@+id/relativeLayoutCharity"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
@@ -480,7 +478,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Caritate"
-                            android:textColor="@color/gray_100"
+                            android:textColor="#000"
                             android:textSize="18sp"
                             android:textStyle="bold" />
 
@@ -489,7 +487,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="00.00"
-                            android:textColor="@color/gray_100"
+                            android:textColor="#000"
                             android:textSize="15sp"
                             android:textStyle="bold" />
 
@@ -504,7 +502,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="2"
                                 android:text="status"
-                                android:textColor="@color/gray_100"
+                                android:textColor="#000"
                                 android:textSize="12sp" />
 
                             <ImageView
@@ -518,8 +516,8 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Luna curenta"
-                            android:textColor="@color/gray_100"
+                            android:text="Luna asta: "
+                            android:textColor="#000"
                             android:textSize="12sp"
 
                             />
@@ -535,7 +533,7 @@
                 </RelativeLayout>
 
                 <RelativeLayout
-                    android:id="@+id/linearLayoutApparel"
+                    android:id="@+id/relativeLayoutApparel"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
@@ -551,7 +549,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Haine/incaltaminte"
-                            android:textColor="@color/gray_100"
+                            android:textColor="#000"
                             android:textSize="18sp"
                             android:textStyle="bold" />
 
@@ -560,7 +558,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="00.00"
-                            android:textColor="@color/gray_100"
+                            android:textColor="#000"
                             android:textSize="15sp"
                             android:textStyle="bold" />
 
@@ -575,7 +573,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="2"
                                 android:text="status"
-                                android:textColor="@color/gray_100"
+                                android:textColor="#000"
                                 android:textSize="12sp" />
 
                             <ImageView
@@ -589,8 +587,8 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Luna curenta"
-                            android:textColor="@color/gray_100"
+                            android:text="Luna asta: "
+                            android:textColor="#000"
                             android:textSize="12sp"
 
                             />
@@ -606,7 +604,7 @@
                 </RelativeLayout>
 
                 <RelativeLayout
-                    android:id="@+id/linearLayoutHealth"
+                    android:id="@+id/relativeLayoutHealth"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
@@ -622,7 +620,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Sanatate"
-                            android:textColor="@color/gray_100"
+                            android:textColor="#000"
                             android:textSize="18sp"
                             android:textStyle="bold" />
 
@@ -631,7 +629,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="00.00"
-                            android:textColor="@color/gray_100"
+                            android:textColor="#000"
                             android:textSize="15sp"
                             android:textStyle="bold" />
 
@@ -646,7 +644,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="2"
                                 android:text="status"
-                                android:textColor="@color/gray_100"
+                                android:textColor="#000"
                                 android:textSize="12sp" />
 
                             <ImageView
@@ -660,8 +658,8 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Luna curenta"
-                            android:textColor="@color/gray_100"
+                            android:text="Luna asta: "
+                            android:textColor="#000"
                             android:textSize="12sp"
 
                             />
@@ -680,7 +678,7 @@
                 </RelativeLayout>
 
                 <RelativeLayout
-                    android:id="@+id/linearLayoutOther"
+                    android:id="@+id/relativeLayoutOther"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
@@ -696,7 +694,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Altele"
-                            android:textColor="@color/gray_100"
+                            android:textColor="#000"
                             android:textSize="18sp"
                             android:textStyle="bold" />
 
@@ -705,7 +703,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="00.00"
-                            android:textColor="@color/gray_100"
+                            android:textColor="#000"
                             android:textSize="15sp"
                             android:textStyle="bold" />
 
@@ -720,7 +718,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="2"
                                 android:text="status"
-                                android:textColor="@color/gray_100"
+                                android:textColor="#000"
                                 android:textSize="12sp" />
 
                             <ImageView
@@ -736,8 +734,8 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Luna curenta"
-                            android:textColor="@color/gray_100"
+                            android:text="Luna asta: "
+                            android:textColor="#000"
                             android:textSize="12sp"
 
                             />
@@ -754,14 +752,13 @@
                         android:src="@drawable/applogo2" />
                 </RelativeLayout>
 
-
                 <com.anychart.AnyChartView
                     android:id="@+id/anyChartView"
                     android:layout_width="match_parent"
                     android:layout_height="600dp" />
 
                 <RelativeLayout
-                    android:id="@+id/linearLayoutAnalysis"
+                    android:id="@+id/relativeLayoutAnalysis"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
@@ -779,8 +776,8 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Total cheltuieli lunare"
-                            android:textColor="@color/gray_100"
+                            android:text="Total cheltuieli luna asta"
+                            android:textColor="#000"
                             android:textSize="18sp"
                             android:textStyle="bold" />
 
@@ -788,8 +785,8 @@
                             android:id="@+id/monthSpentAmount"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Total cheltuili: RON 0"
-                            android:textColor="@color/gray_100"
+                            android:text="Total cheltuieli: RON 0"
+                            android:textColor="#000"
                             android:textSize="15sp"
                             android:textStyle="bold" />
 
@@ -804,7 +801,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="2"
                                 android:text="status"
-                                android:textColor="@color/gray_100"
+                                android:textColor="#000"
                                 android:textSize="12sp" />
 
                             <ImageView
@@ -820,7 +817,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Luna curenta"
+                            android:text="Luna asta: "
                             android:textColor="#000"
                             android:textSize="12sp"
 
@@ -843,5 +840,6 @@
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
+
 
 </LinearLayout>

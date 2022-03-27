@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 public class ChooseAnalyticsActivity extends AppCompatActivity {
+
     private CardView todayCardView, weekCardView, monthCardView;
 
     @Override
@@ -18,8 +19,6 @@ public class ChooseAnalyticsActivity extends AppCompatActivity {
         todayCardView = findViewById(R.id.todayCardView);
         weekCardView = findViewById(R.id.weekCardView);
         monthCardView = findViewById(R.id.monthCardView);
-
-
 
         todayCardView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,6 +34,7 @@ public class ChooseAnalyticsActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(ChooseAnalyticsActivity.this, WeeklyAnalyticsActivity.class);
                 startActivity(intent);
+
             }
         });
 
@@ -44,6 +44,7 @@ public class ChooseAnalyticsActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(ChooseAnalyticsActivity.this, MonthlyAnalyticsActivity.class);
                 startActivity(intent);
+
             }
         });
     }

@@ -51,7 +51,7 @@ public class WeekSpendingActivity extends AppCompatActivity {
 
         toolbar=findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Cheltuieli saptamanele: ");
+        getSupportActionBar().setTitle("Cheltuieli saptamanale: ");
 
         totalWeekAmountTextView=findViewById(R.id.totalWeekAmountTextView);
         progressBar=findViewById(R.id.progressBar);
@@ -91,6 +91,11 @@ public class WeekSpendingActivity extends AppCompatActivity {
         epoch.setDate(0);
         DateTime now = new DateTime();
         Months months = Months.monthsBetween(epoch, now);
+
+        toolbar=findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Cheltuieli lunare: ");
+
 
         expensesRef = FirebaseDatabase.getInstance().getReference("expenses").child(onlineUserId);
         Query query = expensesRef.orderByChild("mounth").equalTo(months.getMonths());

@@ -157,7 +157,7 @@ public class TodayItemsAdapter extends RecyclerView.Adapter<TodayItemsAdapter.Vi
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
-                            Toast.makeText(mContext, "Budget item updaded successfuly", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(mContext, "Categorie de buget modificata cu succes", Toast.LENGTH_SHORT).show();
                         } else {
                             Toast.makeText(mContext, task.getException().toString(), Toast.LENGTH_SHORT).show();
 

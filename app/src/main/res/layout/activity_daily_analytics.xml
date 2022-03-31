@@ -157,6 +157,7 @@
                     </LinearLayout>
 
                     <ImageView
+
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:layout_marginStart="10dp"
@@ -782,7 +783,7 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/monthSpentAmount"
+                            android:id="@+id/monthlySpentAmount"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Total cheltuieli: RON 0"

@@ -32,7 +32,7 @@
                 android:background="@drawable/borders"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="@string/budget"
+                android:text="Buget"
                 android:textColor="#d9e9f6"
                 android:textSize="12sp"
                 android:textStyle="bold" />
@@ -44,7 +44,7 @@
                 android:background="@drawable/borders"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="Today"
+                android:text="Azi"
                 android:textColor="#d9e9f6"
                 android:textSize="12sp"
                 android:textStyle="bold" />
@@ -56,7 +56,7 @@
                 android:background="@drawable/borders"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="Week"
+                android:text="Saptamana"
                 android:textColor="#d9e9f6"
                 android:textSize="12sp"
                 android:textStyle="bold" />
@@ -68,7 +68,7 @@
                 android:background="@drawable/borders"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="Budget"
+                android:text="Lunar"
                 android:textColor="#d9e9f6"
                 android:textSize="12sp"
                 android:textStyle="bold" />
@@ -80,7 +80,7 @@
                 android:background="@drawable/borders"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="Saving"
+                android:text="Economii"
                 android:textColor="#d9e9f6"
                 android:textSize="12sp"
                 android:textStyle="bold" />
@@ -98,59 +98,59 @@
                 android:background="@drawable/borders"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="$0"
+                android:text="0 RON"
                 android:textColor="#d9e9f6"
                 android:textSize="12sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/todayTv"
+                android:id="@+id/todaySpendingTv"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/borders"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="$0"
+                android:text="0 RON"
                 android:textColor="#d9e9f6"
                 android:textSize="12sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/weekTv"
+                android:id="@+id/weekSpendingTv"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/borders"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="$0"
+                android:text="0 RON"
                 android:textColor="#d9e9f6"
                 android:textSize="12sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/monthTv"
+                android:id="@+id/monthSpendingTv"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/borders"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="$0"
+                android:text="0 RON"
                 android:textColor="#d9e9f6"
                 android:textSize="12sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/savingsTv"
+                android:id="@+id/remainingSpendingTv"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/borders"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="$0"
+                android:text="0 RON"
                 android:textColor="#d9e9f6"
                 android:textSize="12sp"
                 android:textStyle="bold" />

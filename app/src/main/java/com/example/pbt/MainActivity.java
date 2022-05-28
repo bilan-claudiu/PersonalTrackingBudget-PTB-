@@ -162,7 +162,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        getAmountBudget();
+        getBudgetAmount();
         getTodaySpentAmount();
         getWeekSpentAmount();
         getMonthSpentAmount();
@@ -171,7 +171,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void getAmountBudget() {
+    private void getBudgetAmount() {
         budgetRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -183,10 +183,7 @@ public class MainActivity extends AppCompatActivity {
                         int pTotal = Integer.parseInt(String.valueOf(total));
                         totalAmountBudget += pTotal;
                         budgetTv.setText(String.valueOf(totalAmountBudget) + " RON");
-
                     }
-                    totalAmountBudgetC = totalAmountBudgetB;
-
                 } else {
                     totalAmountBudget = 0;
                     budgetTv.setText(String.valueOf(0) + " RON");
@@ -257,7 +254,6 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(MainActivity.this, "Error for mounth spent amount", Toast.LENGTH_SHORT).show();
 
             }
         });
@@ -269,7 +265,7 @@ public class MainActivity extends AppCompatActivity {
         MutableDateTime epoch = new MutableDateTime();
         epoch.setDate(0);
         DateTime now = new DateTime();
-        Weeks weeks = Weeks.weeksBetween(epoch, now);
+        Weeks weeks = Weeks.weeksBetween(epoch,now);
 
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("expenses").child(onlineUserID);
         Query query = reference.orderByChild("week").equalTo(weeks.getWeeks());
@@ -290,7 +286,6 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(MainActivity.this, "Error for mounth spent amount", Toast.LENGTH_SHORT).show();
 
             }
         });

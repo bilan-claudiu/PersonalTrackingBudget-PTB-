@@ -204,7 +204,7 @@ public class BudgetActivity extends AppCompatActivity {
                     epoch.setDate(0);
                     DateTime now = new DateTime();
                     Months months = Months.monthsBetween(epoch, now);
-                    Weeks weeks = Weeks.weeksBetween(epoch, now);
+                    Weeks weeks = Weeks.weeksBetween(epoch,now);
 
                     String itemNday = budgetItem + date;
                     String itemNweek = budgetItem + weeks.getWeeks();
@@ -528,13 +528,13 @@ public class BudgetActivity extends AppCompatActivity {
 
                     personalRef.child("dayHouseRatio").setValue((dayHouseRatio));
                     personalRef.child("weekHouseRatio").setValue((weekHouseRatio));
-                    personalRef.child("monthHousRatio").setValue((monthHousRatio));
+                    personalRef.child("monthHouseRatio").setValue((monthHousRatio));
 
                 } else {
 
                     personalRef.child("dayHouseRatio").setValue((0));
                     personalRef.child("weekHouseRatio").setValue((0));
-                    personalRef.child("monthHousRatio").setValue((0));
+                    personalRef.child("monthHouseRatio").setValue((0));
                 }
             }
 

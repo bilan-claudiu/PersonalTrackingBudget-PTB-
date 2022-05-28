@@ -1,4 +1,11 @@
 package com.example.pbt;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
@@ -12,12 +19,9 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
@@ -93,8 +97,8 @@ public class TodaySpendingActivity extends AppCompatActivity {
 
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                addItemSpendOn();
+            public void onClick(View view) {
+                addItemSpentOn();
             }
         });
     }
@@ -139,7 +143,7 @@ public class TodaySpendingActivity extends AppCompatActivity {
 
     }
 
-    private void addItemSpendOn() {
+    private void addItemSpentOn() {
         AlertDialog.Builder myDialog = new AlertDialog.Builder(this);
         LayoutInflater inflater = LayoutInflater.from(this);
         View myView = inflater.inflate(R.layout.input_layout, null);
@@ -176,7 +180,7 @@ public class TodaySpendingActivity extends AppCompatActivity {
                     return;
                 } else {
                     loader.setMessage("adaug categorie... ");
-                    loader.setCancelable(false);
+                    loader.setCanceledOnTouchOutside(false);
                     loader.show();
 
                     String id = expensesRef.push().getKey();
@@ -194,9 +198,11 @@ public class TodaySpendingActivity extends AppCompatActivity {
                     String itemNweek=Item+weeks.getWeeks();
                     String itemNmonth=Item+months.getMonths();
 
-                    Data data = new Data(Item, date, id, itemNday,itemNweek,itemNmonth, Integer.parseInt(Amount), months.getMonths(), weeks.getWeeks(),notes);
+                    Data data = new Data(Item, date, id, itemNday, itemNweek, itemNmonth,Integer.parseInt(Amount), weeks.getWeeks(),months.getMonths(), notes);
 
-                    expensesRef.child(id).setValue(data).addOnCompleteListener((task) -> {
+                    expensesRef.child(id).setValue(data).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
                             Toast.makeText(TodaySpendingActivity.this, "Categorie adaugata cu succes", Toast.LENGTH_SHORT).show();
                         } else {
@@ -204,7 +210,7 @@ public class TodaySpendingActivity extends AppCompatActivity {
 
                         }
                         loader.dismiss();
-
+                        }
 
                     });
 

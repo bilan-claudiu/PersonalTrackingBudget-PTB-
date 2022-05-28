@@ -3,13 +3,13 @@ package com.example.pbt;
 public class Data {
 
     String item, date, id, itemNday,itemNweek,itemNmonth;
-    int amount, mounth, week;
+    int amount,  week,mounth;
     String notes;
 
     public Data() {
     }
 
-    public Data(String item, String date, String id, String itemNday, String itemNweek, String itemNmonth, int amount, int mounth, int week, String notes) {
+    public Data(String item, String date, String id, String itemNday, String itemNweek, String itemNmonth, int amount, int week, int mounth, String notes) {
         this.item = item;
         this.date = date;
         this.id = id;
@@ -17,8 +17,8 @@ public class Data {
         this.itemNweek = itemNweek;
         this.itemNmonth = itemNmonth;
         this.amount = amount;
-        this.mounth = mounth;
         this.week = week;
+        this.mounth = mounth;
         this.notes = notes;
     }
 

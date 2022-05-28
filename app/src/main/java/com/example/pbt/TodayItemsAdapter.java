@@ -143,21 +143,21 @@ public class TodayItemsAdapter extends RecyclerView.Adapter<TodayItemsAdapter.Vi
                 MutableDateTime epoch = new MutableDateTime();
                 epoch.setDate(0);
                 DateTime now = new DateTime();
-                Months months = Months.monthsBetween(epoch, now);
                 Weeks weeks = Weeks.weeksBetween(epoch, now);
+                Months months = Months.monthsBetween(epoch, now);
 
                 String itemNday=item+date;
                 String itemNweek=item+weeks.getWeeks();
                 String itemNmonth=item+months.getMonths();
 
-                Data data = new Data(item, date, post_key, itemNday,itemNweek,itemNmonth, amount, months.getMonths(), weeks.getWeeks(),note);
+                Data data = new Data(item, date, post_key, itemNday, itemNweek, itemNmonth,amount, weeks.getWeeks(), months.getMonths(), note);
 
                 DatabaseReference reference = FirebaseDatabase.getInstance().getReference("expenses").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
                 reference.child(post_key).setValue(data).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
-                            Toast.makeText(mContext, "Categorie de buget modificata cu succes", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(mContext, "Categorie de buger modificata cu succes", Toast.LENGTH_SHORT).show();
                         } else {
                             Toast.makeText(mContext, task.getException().toString(), Toast.LENGTH_SHORT).show();
 
@@ -178,7 +178,7 @@ public class TodayItemsAdapter extends RecyclerView.Adapter<TodayItemsAdapter.Vi
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
-                            Toast.makeText(mContext, "Deleted successfuly", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(mContext, "Sters cu succes", Toast.LENGTH_SHORT).show();
                         } else {
                             Toast.makeText(mContext, task.getException().toString(), Toast.LENGTH_SHORT).show();
 
